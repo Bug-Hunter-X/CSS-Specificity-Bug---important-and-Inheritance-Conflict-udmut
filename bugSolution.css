@@ -1,0 +1,18 @@
+The following corrected CSS code demonstrates a solution by re-arranging specificity and removing unnecessary `!important`:
+
+```css
+.parent {
+  color: blue;
+}
+
+.parent .child {
+  color: green;
+}
+
+.child {
+  color: red;
+}
+```
+
+Alternatively, to maintain the `!important` in `.child` one would need a more specific selector on `.parent .child` to override it such as `
+.parent .child { color: green !important; }`. However this approach is generally less preferred as it can create maintenance problems in larger codebases.
